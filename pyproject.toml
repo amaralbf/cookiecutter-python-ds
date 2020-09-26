@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "cookiecutter-python-ds"
+version = "0.1.0"
+description = ""
+authors = ["Bruno Amaral <amaralbf@gmail.com>"]
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
