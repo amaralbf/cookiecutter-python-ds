@@ -1,9 +1,8 @@
 import inspect
 from pathlib import Path
 
-from loguru import logger
-
 import {{ cookiecutter.package_name }}
+from loguru import logger
 
 PROJECT_DIR = Path(inspect.getfile({{ cookiecutter.package_name }})).resolve().parents[2]
 
