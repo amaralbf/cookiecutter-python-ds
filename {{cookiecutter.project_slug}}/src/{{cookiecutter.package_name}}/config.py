@@ -10,5 +10,4 @@ PROJECT_DIR = Path(inspect.getfile({{ cookiecutter.package_name }})).resolve().p
 {% raw %}
 def configure_logger():
     logger.add(f"{PROJECT_DIR}/logs/{{time}}_debug_my_ds_project.log", level='DEBUG')
-    logger.add(f"{PROJECT_DIR}/logs/{{time}}_info_my_ds_project.log", level='INFO')
-{% endraw %}
+    logger.add(f"{PROJECT_DIR}/logs/{{time}}_info_my_ds_project.log", level='INFO'){% endraw %}
