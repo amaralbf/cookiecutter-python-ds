@@ -1,22 +1,22 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.2.0
-  hooks:
-  - id: check-toml
-    exclude: '{{cookiecutter.project_slug}}/'
-  - id: end-of-file-fixer
-  - id: trailing-whitespace
-- repo: https://github.com/psf/black
-  rev: 20.8b1
-  hooks:
-  - id: black
-    exclude: '{{cookiecutter.project_slug}}/'
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.4
-  hooks:
-  - id: flake8
-    exclude: '{{cookiecutter.project_slug}}/'
-- repo: https://github.com/PyCQA/isort
-  rev: 5.5.4
-  hooks:
-    - id: isort
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    - id: check-toml
+      exclude: '{{cookiecutter.project_slug}}/'
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    - id: black
+      exclude: '{{cookiecutter.project_slug}}/'
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+    - id: flake8
+      exclude: '{{cookiecutter.project_slug}}/'
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.5.4
+    hooks:
+      - id: isort
