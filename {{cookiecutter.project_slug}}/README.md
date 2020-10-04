@@ -1,3 +1,3 @@
-# Project {{cookiecutter.project_name}}
+# Project {{ cookiecutter.project_name }}
 
 Description

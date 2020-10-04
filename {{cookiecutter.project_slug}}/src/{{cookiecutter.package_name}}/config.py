@@ -3,9 +3,9 @@ from pathlib import Path
 
 from loguru import logger
 
-import {{cookiecutter.package_name}}
+import {{ cookiecutter.package_name }}
 
-PROJECT_DIR = Path(inspect.getfile({{cookiecutter.package_name}})).resolve().parents[2]
+PROJECT_DIR = Path(inspect.getfile({{ cookiecutter.package_name }})).resolve().parents[2]
 
 {% raw %}
 def configure_logger():

@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "{{cookiecutter.project_slug}}"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.1.0"
 description = ""
 authors = ["Bruno Amaral <amaralbf@gmail.com>"]
 
 [tool.poetry.scripts]
-{{cookiecutter.project_slug}} = "{{cookiecutter.package_name}}.main:run"
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.main:run"
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
