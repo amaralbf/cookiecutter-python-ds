@@ -1,6 +1,12 @@
-/generated/
-
 .vscode/
+
+# Data Files
+*.csv
+*.xls
+*.xls[bmx]
+
+# Pickle files
+*.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
