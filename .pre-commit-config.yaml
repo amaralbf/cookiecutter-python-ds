@@ -12,7 +12,11 @@ repos:
   - id: black
     exclude: '{{cookiecutter.project_slug}}/'
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.3
+  rev: 3.8.4
   hooks:
   - id: flake8
     exclude: '{{cookiecutter.project_slug}}/'
+- repo: https://github.com/PyCQA/isort
+  rev: 5.5.4
+  hooks:
+    - id: isort
