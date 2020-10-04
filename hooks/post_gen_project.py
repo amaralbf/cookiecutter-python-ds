@@ -28,7 +28,7 @@ def remove_file(filepath):
 
 def generate_pyproject_toml():
     deps = ['click', 'loguru']
-    dev_deps = ['black==20.8b1', 'flake8', 'isort']
+    dev_deps = ['black==20.8b1', 'flake8', 'ipykernel', 'isort']
 
     if not is_negative('{{ cookiecutter.use_pre_commit }}'):
         dev_deps.append('pre-commit')
