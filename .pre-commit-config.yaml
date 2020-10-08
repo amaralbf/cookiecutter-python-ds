@@ -19,4 +19,5 @@ repos:
   - repo: https://github.com/PyCQA/isort
     rev: 5.5.4
     hooks:
-      - id: isort
+    - id: isort
+      exclude: '{{cookiecutter.project_slug}}/'
