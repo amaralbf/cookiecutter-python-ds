@@ -26,7 +26,7 @@ def remove_file(filepath):
     os.remove(PROJECT_DIRECTORY / filepath)
 
 
-def generate_pyproject_toml():
+def add_poetry_to_pyproject():
     deps = ['click', 'loguru']
     dev_deps = ['black==20.8b1', 'flake8', 'ipykernel', 'isort']
 
@@ -38,23 +38,24 @@ def generate_pyproject_toml():
 
     subprocess.call(['poetry', 'init', '-q', '-n'] + deps_list + devdeps_list)
 
-    extend_pyproject_toml()
+    add_script_section()
 
 
-def extend_pyproject_toml():
-    with open('pyproject_complement.toml', 'rt') as f:
-        other_tools_sections = f.read()
+def add_script_section():
+    script_section = (
+        '\n[tool.poetry.scripts]'
+        '\n{{ cookiecutter.project_slug }} = "{{ cookiecutter.package_name }}.main:run"'
+        '\n'
+    )
 
     with open('pyproject.toml', 'at') as f:
-        f.write('\n' + other_tools_sections)
-
-    remove_file('pyproject_complement.toml')
+        f.write(script_section)
 
 
 if __name__ == "__main__":
     validate_option('{{ cookiecutter.use_pre_commit }}')
 
-    generate_pyproject_toml()
+    add_poetry_to_pyproject()
 
     if is_negative('{{ cookiecutter.use_pre_commit }}'):
         remove_file('.pre-commit-config.yaml')
