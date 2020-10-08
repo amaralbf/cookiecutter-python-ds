@@ -26,6 +26,10 @@ def remove_file(filepath):
     os.remove(PROJECT_DIRECTORY / filepath)
 
 
+def rename_file(old_filepath, new_filepath):
+    os.rename(PROJECT_DIRECTORY / old_filepath, PROJECT_DIRECTORY / new_filepath)
+
+
 def add_poetry_to_pyproject():
     deps = ['click', 'loguru']
     dev_deps = ['black==20.8b1', 'flake8', 'ipykernel', 'isort']
@@ -56,6 +60,8 @@ if __name__ == "__main__":
     validate_option('{{ cookiecutter.use_pre_commit }}')
 
     add_poetry_to_pyproject()
+
+    rename_file('gitignore', '.gitignore')
 
     if is_negative('{{ cookiecutter.use_pre_commit }}'):
         remove_file('.pre-commit-config.yaml')
